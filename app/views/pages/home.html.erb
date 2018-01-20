@@ -1,6 +1,8 @@
 <% if current_user %>
   <h1>Good day <%= current_user.name %></h1>
   <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+  <h2><%= link_to @rss.title, @rss.link %></h2>
+  <p><%= @rss.description %></p>
   <p><%= @weather['main']['temp'].round %> degrees</p>
   <%= image_tag get_icon(@weather['weather'][0]['icon']) %>
 <% else %>
