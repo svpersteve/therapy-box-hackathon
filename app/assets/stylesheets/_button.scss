@@ -4,3 +4,15 @@
   font-family: 'Montserrat', sans-serif;
   cursor: pointer;
 }
+
+.home-buttons {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 40vh auto;
+
+  .button {
+    margin-right: 20px;
+    font-size: 30px;
+  }
+}
