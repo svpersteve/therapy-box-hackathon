@@ -1,0 +1,23 @@
+.form {
+  width: 30%;
+  margin: 0 auto;
+
+  input {
+    font-size: 25px;
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  input[type='submit'] {
+    font-size: 15px;
+  }
+
+  label {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

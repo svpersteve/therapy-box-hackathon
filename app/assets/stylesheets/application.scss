@@ -13,13 +13,17 @@
  *= require_self
  */
 
+@import 'form';
+@import 'button';
+
 h1,
 h2,
 h3 {
   font-family: 'Ubuntu', sans-serif;
 }
 
-p {
+p,
+a {
   font-family: 'Montserrat', sans-serif;
 }
 
