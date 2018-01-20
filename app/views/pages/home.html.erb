@@ -5,6 +5,7 @@
   <p><%= @rss.description %></p>
   <p><%= @weather['main']['temp'].round %> degrees</p>
   <%= image_tag get_icon(@weather['weather'][0]['icon']) %>
+  <%= @location.city %>
 <% else %>
   <p><%= link_to 'Sign in', new_user_session_path %></p>
   <p><%= link_to 'Register', new_user_registration_path %></p>
