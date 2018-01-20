@@ -1,6 +1,7 @@
 <% if current_user %>
   <h1>Good day <%= current_user.name %></h1>
   <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+  <%= @weather['main']['temp'].round %>
   <%= @weather['weather'][0]['main'] %>
   <%= @weather['weather'][0]['description'] %>
   <%= @weather['weather'][0]['icon'] %>
