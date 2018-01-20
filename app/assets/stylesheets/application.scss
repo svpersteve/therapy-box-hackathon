@@ -12,9 +12,13 @@
  *
  *= require_self
  */
-
+@import 'bootstrap';
 @import 'form';
 @import 'button';
+
+body {
+  background-image: image-url('Background.png');
+}
 
 h1,
 h2,
@@ -25,12 +29,22 @@ h3 {
 p,
 a {
   font-family: 'Montserrat', sans-serif;
-}
-
-body {
-  background-image: image-url('Background.png');
-}
-
-a {
   text-decoration: none;
+}
+
+.card {
+  background-color: #76ABF2;
+  border: 1px solid  #FFE575;
+}
+
+.card-title {
+  background-color: #FFE575;
+}
+
+.card-sub-title a {
+  color: black;
+}
+
+.weather-icon {
+
 }

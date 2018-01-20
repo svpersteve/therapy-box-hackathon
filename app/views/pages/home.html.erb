@@ -1,14 +1,40 @@
 <% if current_user %>
-  <h1>Good day <%= current_user.name %></h1>
-  <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-  <h2><%= link_to @rss.title, @rss.link %></h2>
-  <p><%= @rss.description %></p>
-  <p><%= @weather['main']['temp'].round %> degrees</p>
-  <%= image_tag get_icon(@weather['weather'][0]['icon']) %>
-  <%= @location.city %>
-<% else %>
-  <div class='home-buttons'>
-    <%= link_to 'Sign in', new_user_session_path, class: 'button' %>
-    <%= link_to 'Register', new_user_registration_path, class: 'button' %>
+<h1>Good day <%= current_user.name %></h1>
+<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-md-4">
+      <div class="card">
+        <div class="card-block">
+          <h1 class="card-title text-center">Weather</h1>
+          <%= image_tag(get_icon(@weather['weather'][0]['icon']), class: 'img-responsive weather-icon') %>          
+          <%= @location.city %>
+          <p><%= @weather['main']['temp'].round %> degrees</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="card">
+        <div class="card-block">
+          <h1 class="card-title text-center">News</h1>
+          <h2 class="card-sub-title text-center"><%= link_to @rss.title, @rss.link %></h2>
+          <p class="text-center"><%= @rss.description %></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="card">
+        <div class="card-block">
+          <h1 class="card-title text-center"></h1>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+<% else %>
+<div class='home-buttons'>
+  <%= link_to 'Sign in', new_user_session_path, class: 'button' %>
+  <%= link_to 'Register', new_user_registration_path, class: 'button' %>
+</div>
 <% end %>
